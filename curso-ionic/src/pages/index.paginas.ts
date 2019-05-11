@@ -1,0 +1,12 @@
+export { ChatPage } from './chat/chat';
+export { HomePage } from './home/home';
+export { ListPage } from './list/list';
+export { LobyPage } from './loby/loby';
+export { MenuPage } from './menu/menu';
+export { ModalPage } from './modal/modal';
+export { Pagina2Page } from './pagina2/pagina2';
+export { Pagina3Page } from './pagina3/pagina3';
+export { SegmentPage } from './segment/segment';
+export { SharePage } from './share/share';
+export { TogglePage } from './toggle/toggle';
+export { LoginPage } from './login/login';

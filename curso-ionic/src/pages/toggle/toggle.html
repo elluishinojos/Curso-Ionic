@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Toggle, Alerts y Toast</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="mostrarMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <h2 *ngIf="status">Alerts</h2>
+        <h2 *ngIf="!status">Toast</h2>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-toggle [(ngModel)]="status"></ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div *ngIf="status">
+    <button ion-button block color="primary" (click)="doAlert()">Show Basic Alert</button>
+    <button ion-button block color="secondary" (click)="doPrompt()">Show Prompt Alert</button>
+    <button ion-button block color="light" (click)="doConfirm()">Show Confirmation Alert</button>
+    <button ion-button block color="danger" (click)="doRadio()">Show Radio Alert</button>
+    <button ion-button block color="dark" (click)="doCheckbox()">Show Checkbox Alert</button>
+  </div>
+  <div *ngIf="!status">
+    <button ion-button block color="primary" (click)="showToast('top')">Show Toast Top Position</button>
+    <button ion-button block color="secondary" (click)="showToast('middle')">Show Toast Middle Position</button>
+    <button ion-button block color="light" (click)="showToast('bottom')">Show Toast Bottom Position</button>
+    <button ion-button block color="danger" (click)="showLongToast()">Show Long Toast</button>
+    <button ion-button block color="dark" (click)="showToastWithCloseButton()">Show Toast W/ Close Button</button>
+  </div>
+</ion-content>

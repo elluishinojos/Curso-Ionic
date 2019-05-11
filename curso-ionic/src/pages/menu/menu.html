@@ -1,0 +1,52 @@
+<ion-content padding>
+  <ion-menu [content]="content">
+    <ion-header padding color="primary">
+      <ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/avatar.jpg">
+          </ion-avatar>
+          <ion-title>Menu</ion-title>
+          <p>Hola soy el menu</p>
+        </ion-item>
+      </ion-list>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button no-lines class="lineTop" ion-item (click)="abrirPagina(home)">
+          <ion-icon item-left name="home"></ion-icon>
+          Home
+        </button>
+        <button no-lines class="lineTop" ion-item (click)="abrirPagina(toggle)">
+          <ion-icon item-left name="code"></ion-icon>
+          Toggle
+        </button>
+        <button no-lines class="lineTop" ion-item (click)="abrirPagina(segment)">
+          <ion-icon item-left name="star"></ion-icon>
+          Segment
+        </button>
+        <button no-lines class="lineTop" ion-item (click)="abrirPagina(list)">
+          <ion-icon item-left name="planet"></ion-icon>
+          Listas Sonidos
+        </button>
+        <button no-lines class="lineTop" ion-item (click)="abrirPagina(share)">
+          <ion-icon item-left name="share"></ion-icon>
+          Social Sharing
+        </button>
+        <button no-lines class="lineTop lineBottom" ion-item (click)="abrirPagina(loby)">
+          <ion-icon item-left name="chatboxes"></ion-icon>
+          Chat
+        </button>
+      </ion-list>
+    </ion-content>
+    <ion-footer padding>
+      <ion-list>
+        <button no-lines ion-item (click)="cerrarSesion()">
+          <ion-icon item-left name="log-out"></ion-icon>
+          Cerrar Sesión
+        </button>
+      </ion-list>
+    </ion-footer>
+  </ion-menu>
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+</ion-content>

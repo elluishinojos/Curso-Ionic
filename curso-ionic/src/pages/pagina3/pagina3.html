@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Página 3</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h4 text-center>{{ banda.nombre }}</h4>
+  <h3 text-center>{{ banda.genero }}</h3>
+  <button ion-button block color="primary" (click)="irAtras()">
+    ir atras con evento
+  </button>
+  <button ion-button block color="secondary" (click)="irRoot()">
+    ir al root
+  </button>
+  <button ion-button block color="danger" navPop>
+    ir atras sin evento
+  </button>
+</ion-content>
